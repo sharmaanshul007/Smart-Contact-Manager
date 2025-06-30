@@ -18,21 +18,26 @@ Smart Contact Manager is a secure and user-friendly Spring Boot application that
 ---
 
 ##  Project Structure
-src
-├── main
-│ ├── java
-│ │ └── com.smart
-│ │ ├── config # Spring Security Configuration
-│ │ ├── controller # Controllers (Web Layer)
-│ │ ├── dao # Repository Interfaces
-│ │ ├── entities # JPA Entities (User, Contact, etc.)
-│ │ └── helper # Utility Classes
-│ └── resources
-│ ├── static # Static files (CSS, JS, Images)
-│ ├── templates
-│ │ └── normal # Thymeleaf template fragments
-│ │ ├── base.html
-│ │ ├── home.html
-│ │ ├── login.html
-│ │ └── signup.html
-│ └── application.properties
+src/
+├── main/
+│   ├── java/
+│   │   └── com.smart/
+│   │       ├── config/               # Spring Security configuration (WebSecurityConfigurerAdapter)
+│   │       ├── controller/           # Web controllers handling HTTP requests (Home, User, Auth)
+│   │       ├── dao/                  # Data Access layer using Spring Data JPA repositories
+│   │       ├── entities/             # JPA Entities like User, Contact
+│   │       └── helper/               # Utility classes (e.g., Message, ImageUploadHandler)
+│   └── resources/
+│       ├── static/                   # Static assets like CSS, JS, images
+│       ├── templates/
+│       │   ├── normal/               # Thymeleaf views for logged-in users
+│       │   ├── base.html             # Layout file with fragments
+│       │   ├── home.html             # Homepage view
+│       │   ├── login.html            # Login form
+│       │   └── signup.html           # Signup form
+│       └── application.properties    # Spring Boot app configuration
+├── test/                             # JUnit tests
+│
+├── .gitignore                        # Ignored files and directories
+├── pom.xml                           # Maven dependencies and project info
+└── README.md                         # You're here!
